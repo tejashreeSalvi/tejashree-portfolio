@@ -1,6 +1,5 @@
 import "./hero.scss";
 import { motion } from "framer-motion";
-import { Button } from "@mui/material";
 
 const textVariants = {
   initial: {
@@ -58,18 +57,10 @@ const Hero = () => {
             Full Stack Developer + DevOps
           </motion.h1>
 
-          <motion.div
-        className="slidingTextContainer"
-        variants={sliderVariants}
-        initial="initial"
-        animate="animate"
-      >
-        Developer Writer 
-      </motion.div>
           <motion.div variants={textVariants} className="buttons">
-            <Button  variants={textVariants} onClick={handleClick}>
+            <motion.button  variants={textVariants} onClick={handleClick}>
               Download Resume
-            </Button>
+            </motion.button>
           </motion.div>
           <motion.img
             variants={textVariants}
@@ -81,6 +72,14 @@ const Hero = () => {
       </div>
 
       
+      <motion.div
+        className="slidingTextContainer"
+        variants={sliderVariants}
+        initial="initial"
+        animate="animate"
+      >
+        Developer Writer 
+      </motion.div>
       
       {/* <div className="imageContainer">
         <img src="/hero.png" alt="" />
